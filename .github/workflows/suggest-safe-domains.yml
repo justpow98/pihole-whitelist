@@ -28,18 +28,18 @@ jobs:
       
           # Create or update branch
           if git ls-remote --exit-code --heads origin "$BRANCH_NAME"; then
-            git fetch origin "$BRANCH_NAME"
-            git checkout "$BRANCH_NAME"
-            git rebase "origin/$BRANCH_NAME"
-          else
-            git checkout -b "$BRANCH_NAME"
-          fi
-      
-          python3 scripts/extract_safe_domains.py >> whitelist.txt
-      
-          git add whitelist.txt
-          git commit -m "chore: suggest new safe domains from Loki logs"
-          git push https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME"
+             git fetch origin "$BRANCH_NAME"
+             git checkout "$BRANCH_NAME"
+             git rebase "origin/$BRANCH_NAME"
+           else
+             git checkout -b "$BRANCH_NAME"
+           fi
+           
+           python3 scripts/extract_safe_domains.py >> whitelist.txt
+           
+           git add whitelist.txt
+           git commit -m "chore: suggest new safe domains from Loki logs"
+           git push https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
