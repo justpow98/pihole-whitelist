@@ -35,13 +35,10 @@ jobs:
           python3 scripts/extract_safe_domains.py >> whitelist.txt
 
       - name: Commit and push changes
-        env:
-          GH_TOKEN: ${{ secrets.BOT_PAT }}
         run: |
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
           git add whitelist.txt
           git commit -m "chore: suggest new safe domains from Loki logs"
-          git push origin "$BRANCH_NAME"
+          git push https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
