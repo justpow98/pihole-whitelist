@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   suggest-domains:
-    runs-on: [self-hosted, unraid, pihole]
+    runs-on: [self-hosted, unraid, pi-hole]
 
     steps:
       - name: Checkout repository
