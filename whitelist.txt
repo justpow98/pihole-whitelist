@@ -1,0 +1,70 @@
+akamai.net # 📱 CDN - Content delivery network
+akamaihd.net # 📱 CDN - Content delivery network
+dlvr1.net # 📱 CDN - Streaming services
+fastly.net # 📱 CDN - Content delivery network
+jsdelivr.net # 📱 CDN - JavaScript delivery
+
+apple.com # 📱 General - Apple services
+appleid.apple.com # 📱 General - Apple account services
+configuration.apple.com # 📱 General - Apple device configuration
+icloud.com # 📱 General - Apple cloud services
+time.apple.com # 📱 General - Apple time sync
+
+clients.google.com # 📱 General - Google services
+googleapis.com # 📱 General - Google API services
+connectivitycheck.gstatic.com # 📱 General - Google connectivity
+www.gstatic.com # 📱 General - Google static content
+
+dl.delivery.mp.microsoft.com # 📱 General - Microsoft updates
+live.com # 📱 General - Microsoft services
+microsoft.com # 📱 General - Microsoft services
+msftconnecttest.com # 📱 General - Microsoft connectivity
+msftncsi.com # 📱 General - Microsoft network check
+teams.microsoft.com # 📱 General - Microsoft Teams
+update.microsoft.com # 📱 General - Windows updates
+windowsupdate.com # 📱 General - Windows updates
+
+nvidia.com # 📱 General - Nvidia services
+geforce.com # 📱 General - Nvidia gaming
+
+zoom.us # 📱 General - Video conferencing
+
+itunes.apple.com # 📲 Apps - Apple store
+play.googleapis.com # 📲 Apps - Google Play
+push.apple.com # 📲 Apps - Apple notifications
+api.amazon.com # 📲 Apps - Amazon services
+samsung.com # 📲 Apps - Samsung services
+samsungcloud.com # 📲 Apps - Samsung cloud
+
+netflix.com # 🎮 Media - Netflix streaming
+secure.netflix.com # 🎮 Media - Netflix auth
+plex.tv # 🎮 Media - Plex streaming
+playstation.net # 🎮 Media - PlayStation network
+sonyentertainmentnetwork.com # 🎮 Media - PlayStation services
+spotify.com # 🎮 Media - Spotify streaming
+spclient.wg.spotify.com # 🎮 Media - Spotify client
+twitch.tv # 🎮 Media - Twitch streaming
+xbox.com # 🎮 Media - Xbox services
+xboxlive.com # 🎮 Media - Xbox network
+youtube.com # 🎮 Media - YouTube streaming
+
+pool.ntp.org # 🏠 IoT - Network time
+ntp.ubuntu.com # 🏠 IoT - Ubuntu time sync
+time.windows.com # 🏠 IoT - Windows time sync
+tuyaus.com # 🏠 IoT - Tuya US
+tuyaeu.com # 🏠 IoT - Tuya EU
+mi.com # 🏠 IoT - Xiaomi services
+xiaomi.com # 🏠 IoT - Xiaomi services
+amazonaws.com # 🏠 IoT - AWS services
+cloudfront.net # 🏠 IoT - AWS CDN
+
+github.com # 🧪 Dev - GitHub
+raw.githubusercontent.com # 🧪 Dev - GitHub content
+docker.com # 🧪 Dev - Docker
+docker.io # 🧪 Dev - Docker registry
+letsencrypt.org # 🧪 Dev - SSL certificates
+acme-v02.api.letsencrypt.org # 🧪 Dev - Let's Encrypt API
+cloudflare.com # 🧪 Dev - Cloudflare
+cloudflare-dns.com # 🧪 Dev - Cloudflare DNS
+bitwarden.com # 🧪 Dev - Password manager
+vaultwarden.com # 🧪 Dev - Self-hosted Bitwarden
