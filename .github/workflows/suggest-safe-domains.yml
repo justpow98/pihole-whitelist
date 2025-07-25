@@ -40,6 +40,7 @@ jobs:
            
            git add whitelist.txt
            git commit -m "chore: suggest new safe domains from Loki logs"
+           git pull --rebase origin "$BRANCH_NAME" || exit 1
            git push --force-with-lease https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME:refs/heads/$BRANCH_NAME"
 
       - name: Create Pull Request
