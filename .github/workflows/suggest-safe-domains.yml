@@ -37,7 +37,7 @@ jobs:
           git config user.email "${{ env.BOT_EMAIL }}"
 
       - name: Extract suggested domains
-        run: python3 scripts/suggest_whitelist.py
+        run: python3 scripts/extract_safe_domains.py
 
       - name: Create or update Pull Request
         uses: peter-evans/create-pull-request@v5
