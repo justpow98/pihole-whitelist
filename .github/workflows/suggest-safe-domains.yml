@@ -26,8 +26,7 @@ jobs:
         run: |
           BRANCH_NAME="suggested-allowlist-$(date +'%Y-%m')"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-      
-          # Create or update branch
+          
           if git ls-remote --exit-code --heads origin "$BRANCH_NAME"; then
              git fetch origin "$BRANCH_NAME"
              git checkout "$BRANCH_NAME"
@@ -35,18 +34,24 @@ jobs:
           else
              git checkout -b "$BRANCH_NAME"
           fi
-
-           
-           python3 scripts/extract_safe_domains.py >> whitelist.txt
-           
-           git add whitelist.txt
-           git commit -m "chore: suggest new safe domains from Loki logs"
-           for i in {1..3}; do
-              git pull --rebase origin "$BRANCH_NAME" || exit 1
-              git push --force-with-lease https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME:refs/heads/$BRANCH_NAME" && break
-              echo "Push failed due to stale info, retrying in 5 seconds..."
-              sleep 5
+          
+          python3 scripts/extract_safe_domains.py >> whitelist.txt
+          git add whitelist.txt
+          git commit -m "chore: suggest new safe domains from Loki logs"
+          
+          # Only run the pull/push loop if the branch exists on the remote
+          if git ls-remote --exit-code --heads origin "$BRANCH_NAME"; then
+            for i in {1..3}; do
+               git pull --rebase origin "$BRANCH_NAME" || exit 1
+               git push --force-with-lease https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME:refs/heads/$BRANCH_NAME" && break
+               echo "Push failed due to stale info, retrying in 5 seconds..."
+               sleep 5
             done
+          else
+            # First push for new branch (no pull needed)
+            git push --set-upstream https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git "$BRANCH_NAME:refs/heads/$BRANCH_NAME"
+          fi
+
 
 
       - name: Create Pull Request
