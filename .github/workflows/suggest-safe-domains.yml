@@ -34,18 +34,16 @@ jobs:
           python3 scripts/extract_safe_domains.py >> whitelist.txt
 
       - name: Commit and push changes
-        env:
-          BRANCH_NAME: "suggested-allowlist-$(date +'%Y-%m')"
         run: |
+          BRANCH_NAME="suggested-allowlist-$(date +'%Y-%m')"
           git add whitelist.txt
           git commit -m "chore: suggest new safe domains from Loki logs"
           git push origin "$BRANCH_NAME"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          # we’re using a PAT here, so GITHUB_TOKEN permissions
-          # don’t need to include write access to PRs
           token: ${{ secrets.WHITELIST_PAT }}
           title: "chore: suggest new safe domains"
           body: |
