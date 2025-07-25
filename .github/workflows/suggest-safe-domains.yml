@@ -21,6 +21,7 @@ jobs:
         run: |
           git config user.name "${{ secrets.BOT_GIT_NAME }}"
           git config user.email "${{ secrets.BOT_GIT_EMAIL }}"
+          git remote set-url origin https://x-access-token:${{ secrets.BOT_PAT }}@github.com/justpow98/pihole-whitelist.git
 
       - name: Extract suggested domains and push branch
         run: |
