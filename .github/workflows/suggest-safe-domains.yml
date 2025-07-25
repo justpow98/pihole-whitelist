@@ -32,6 +32,7 @@ jobs:
              git fetch origin "$BRANCH_NAME"
              git checkout "$BRANCH_NAME"
              git pull --rebase origin "$BRANCH_NAME"
+             git reset --hard "origin/$BRANCH_NAME"
           else
              git checkout -b "$BRANCH_NAME"
           fi
