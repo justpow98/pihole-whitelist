@@ -1,0 +1,47 @@
+clients.google.com # 📱 General Web Services
+connectivitycheck.gstatic.com # 📱 General Web Services
+www.gstatic.com # 📱 General Web Services
+apple.com # 📱 General Web Services
+icloud.com # 📱 General Web Services
+msftconnecttest.com # 📱 General Web Services
+msftncsi.com # 📱 General Web Services
+microsoft.com # 📱 General Web Services
+live.com # 📱 General Web Services
+nvidia.com # 📱 General Web Services
+geforce.com # 📱 General Web Services
+akamai.net # 📱 General Web Services
+akamaihd.net # 📱 General Web Services
+itunes.apple.com # 📲 App Stores & Mobile Devices
+play.googleapis.com # 📲 App Stores & Mobile Devices
+push.apple.com # 📲 App Stores & Mobile Devices
+api.amazon.com # 📲 App Stores & Mobile Devices
+samsung.com # 📲 App Stores & Mobile Devices
+samsungcloud.com # 📲 App Stores & Mobile Devices
+xboxlive.com # 🎮 Gaming & Media
+xbox.com # 🎮 Gaming & Media
+playstation.net # 🎮 Gaming & Media
+sonyentertainmentnetwork.com # 🎮 Gaming & Media
+spotify.com # 🎮 Gaming & Media
+spclient.wg.spotify.com # 🎮 Gaming & Media
+twitch.tv # 🎮 Gaming & Media
+youtube.com # 🎮 Gaming & Media
+pool.ntp.org # 🏠 Smart Home Devices
+ntp.ubuntu.com # 🏠 Smart Home Devices
+time.apple.com # 🏠 Smart Home Devices
+time.windows.com # 🏠 Smart Home Devices
+tuyaus.com # 🏠 Smart Home Devices
+tuyaeu.com # 🏠 Smart Home Devices
+mi.com # 🏠 Smart Home Devices
+xiaomi.com # 🏠 Smart Home Devices
+amazonaws.com # 🏠 Smart Home Devices
+cloudfront.net # 🏠 Smart Home Devices
+github.com # 🧪 Self-Hosting & Dev Tools
+raw.githubusercontent.com # 🧪 Self-Hosting & Dev Tools
+docker.com # 🧪 Self-Hosting & Dev Tools
+docker.io # 🧪 Self-Hosting & Dev Tools
+letsencrypt.org # 🧪 Self-Hosting & Dev Tools
+acme-v02.api.letsencrypt.org # 🧪 Self-Hosting & Dev Tools
+cloudflare.com # 🧪 Self-Hosting & Dev Tools
+cloudflare-dns.com # 🧪 Self-Hosting & Dev Tools
+bitwarden.com # 🧪 Self-Hosting & Dev Tools
+vaultwarden.com # 🧪 Self-Hosting & Dev Tools
